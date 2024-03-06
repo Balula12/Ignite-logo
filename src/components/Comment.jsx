@@ -3,26 +3,26 @@ import styles from "./Comment.module.css";
 import { Avatar } from "./Avatar";
 
 
-export function Comment(){
+export function Comment({ content }) {
     return (
         <div className={styles.comment}>
-            <Avatar hasBorder={false} src="https://github.com/Balula12.png"/>
+            <Avatar hasBorder={false} src="https://github.com/Balula12.png" />
 
             <div className={styles.commentBox}>
 
                 <div className={styles.commentContent}>
-                <header>
-                    <div className={styles.authorAndTime}>
-                        <strong>Gustavo Balula</strong>
-                        <time title="16/02/2024 às 17:05" dateTime="2024-02-16 17:06:00">Cerca de 1 hora atrás</time>
-                       
-                    </div>
+                    <header>
+                        <div className={styles.authorAndTime}>
+                            <strong>Gustavo Balula</strong>
+                            <time title="16/02/2024 às 17:05" dateTime="2024-02-16 17:06:00">Cerca de 1 hora atrás</time>
 
-                    <button title="Deletar comentário">
-                        <TrashSimple size={24} />
-                    </button>
-                </header>
-                <p>Muito Bem Gustavo</p>
+                        </div>
+
+                        <button title="Deletar comentário">
+                            <TrashSimple size={24} />
+                        </button>
+                    </header>
+                    <p>{content}</p>
                 </div>
 
                 <footer>
